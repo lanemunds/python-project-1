@@ -124,9 +124,9 @@ def author_list(author_name):
     resp_list =[]
     with open('library.txt', 'r') as f:
         for line in f:
-            mylist = line.split(',')
-            if mylist[1] == author_name:
-                resp_list.append(mylist[0])
+            my_list = line.split(', ')
+            if my_list[1] == author_name:
+                resp_list.append(my_list[0])
         print(resp_list)
            
 
