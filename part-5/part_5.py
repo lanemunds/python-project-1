@@ -75,7 +75,7 @@ def see_books(book_source):
 def home_page():
     quit = True
     while quit == True:
-        in_select = int(input("to add a book type 1. to view all book type 2. To quit type 3. to find total number of pages type 4- "))
+        in_select = int(input("to add a book type 1... to view all book type 2.... To quit type 3... to find total number of pages type 4... to find books by an author type 5... to find the average rating type 6... to find the average number of pages type 7...- "))
         if in_select == 1:
             add_book()
         elif in_select == 2:
@@ -84,6 +84,14 @@ def home_page():
             quit = False       
         elif in_select == 4:
             total_pages()
+        elif in_select == 5:
+            author_list(input("type an authors name- "))
+        elif in_select == 6:
+            avg_rtng()
+        elif in_select == 7:
+            avg_pages()
+            
+           
         else:
             print('please select an option from the menu')    
         
@@ -109,15 +117,40 @@ def total_pages():
             total = total + int(mylist[4])
         print(total)    
             
-                    
-    #         pagestot = 0
-    #         pagestot = pagestot + int(line[4])
-    # return pagestot    
+   
 
 
+def author_list(author_name):
+    resp_list =[]
+    with open('library.txt', 'r') as f:
+        for line in f:
+            mylist = line.split(',')
+            if mylist[1] == author_name:
+                resp_list.append(mylist[0])
+        print(resp_list)
+           
 
 
-
+def avg_rtng():
+    total = 0
+    count = 0
+    with open("library.txt","r") as f:
+        for line in f:
+            mylist = line.split(',')
+            total = total + float(mylist[3])
+            count = count + 1
+        print(total/count)    
+            
+def avg_pages():
+    total = 0
+    count = 0
+    with open("library.txt","r") as f:
+        for line in f:
+            mylist = line.split(',')
+            total = total + float(mylist[4])
+            count = count + 1
+        print(total/count)    
+            
 
 
 

@@ -3,3 +3,6 @@ Harry Potter, JK Rowling, 1999, 4.5, 2005
 Harry Potter, JK Rowling, 1999, 4.5, 2005
 Harry Potter, JK Rowling, 1999, 4.5, 2005
 hello, hello, 1989, 2.0, 2000
+hi, hello, 2020, 4.3, 100
+lane, lane, 1998, 4.0, 200
+hello there, obi wan, 2000, 5.0, 3000
